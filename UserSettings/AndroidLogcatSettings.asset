@@ -3,17 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "8897c2fa",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 31208,
+        "processId": 13883,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "8897c2fa",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 14823,
-            "exited": true
-        },
         {
             "deviceId": "8897c2fa",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
@@ -24,24 +18,36 @@
             "deviceId": "8897c2fa",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 18358,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "8897c2fa",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 29503,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "8897c2fa",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 30609,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "8897c2fa",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 31208,
+            "exited": true
+        },
+        {
+            "deviceId": "8897c2fa",
+            "name": "com.miui.home",
+            "processId": 2900,
+            "exited": false
+        },
+        {
+            "deviceId": "8897c2fa",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 13883,
             "exited": false
         }
     ],
