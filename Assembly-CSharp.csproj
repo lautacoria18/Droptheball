@@ -54,13 +54,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\DragDrop.cs" />
+    <Compile Include="Assets\AudioScript.cs" />
     <Compile Include="Assets\ItemSlot.cs" />
     <Compile Include="Assets\LevelEditorManager.cs" />
     <Compile Include="Assets\FollowScript.cs" />
     <Compile Include="Assets\PreLevel.cs" />
     <Compile Include="Assets\ItemController.cs" />
     <Compile Include="Assets\Ball.cs" />
-    <Compile Include="Assets\AudioScript.cs" />
+    <Compile Include="Assets\ItemScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
