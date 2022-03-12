@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class AudioScript : MonoBehaviour
 {
     public static AudioClip track1, track2, track3, track4, track5, track6, track7;
@@ -9,7 +9,9 @@ public class AudioScript : MonoBehaviour
     public bool playing = false;
     private int lastSong;
     // Start is called before the first frame update
-    void Start()
+
+    public static AudioScript inst;
+    void Awake()
     {
         track1 = Resources.Load<AudioClip>("track1");
         track2 = Resources.Load<AudioClip>("track2");
@@ -20,15 +22,48 @@ public class AudioScript : MonoBehaviour
         track7 = Resources.Load<AudioClip>("track7");
 
         audioSrc = GetComponent<AudioSource>();
+
+
+        if (AudioScript.inst == null)
+        {
+
+            AudioScript.inst = this;
+
+            DontDestroyOnLoad(gameObject);
+
+            //Scene level = SceneManager.GetActiveScene();
+
+            //PlaySongBySceneName(level.name);
+
+            //Debug.Log(level.name);
+            //audioSc.Play();
+            //PlayRandomSong();
+
+        }
+        else
+        {
+
+
+
+            Destroy(gameObject);
+        }
+
     }
 
+    void Start() {
+        track1 = Resources.Load<AudioClip>("track1");
+        track2 = Resources.Load<AudioClip>("track2");
+        track3 = Resources.Load<AudioClip>("track3");
+        track4 = Resources.Load<AudioClip>("track4");
+        track5 = Resources.Load<AudioClip>("track5");
+        track6 = Resources.Load<AudioClip>("track6");
+        track7 = Resources.Load<AudioClip>("track7");
+
+        audioSrc = GetComponent<AudioSource>();
+    }
     void Update() {
 
-        if (!playing)
-        {
-            PlayRandomSong();
-            playing = true;
-        }
+       
 
         if (!audioSrc.isPlaying) {
 

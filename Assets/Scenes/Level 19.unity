@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d756a3c7138b6d4d89fe860e40a7fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Level 12
+  levelToLoad: Level 20
 --- !u!50 &417890691
 Rigidbody2D:
   serializedVersion: 4

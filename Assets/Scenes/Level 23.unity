@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d756a3c7138b6d4d89fe860e40a7fa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: Level 12
+  levelToLoad: Level 24
 --- !u!50 &417890691
 Rigidbody2D:
   serializedVersion: 4
@@ -849,7 +849,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.5
-  m_Material: {fileID: 6200000, guid: 845a3a452ae412e42a1d93fb5a3206be, type: 2}
+  m_Material: {fileID: 6200000, guid: 8f225ae4489984d41860ac927d3ec1cd, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
