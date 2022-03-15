@@ -37,7 +37,7 @@ public class AudioScript : MonoBehaviour
 
             //Debug.Log(level.name);
             //audioSc.Play();
-            //PlayRandomSong();
+            PlayRandomSong();
 
         }
         else
@@ -64,13 +64,15 @@ public class AudioScript : MonoBehaviour
     void Update() {
 
        
-
+/*
         if (!audioSrc.isPlaying) {
 
             Debug.Log("Se termino");
             //Invoke("PlayRandomSong", 1.5f);
             PlayRandomSong();
         }
+        */
+        
     }
 
     void PlayRandomSong()
@@ -92,41 +94,42 @@ public class AudioScript : MonoBehaviour
                 case 1:
 
                     Debug.Log("track1");
-                    audioSrc.PlayOneShot(track1);
+                    audioSrc.clip =track1 ;
                     lastSong = 1;
                     break;
                 case 2:
                     Debug.Log("track2");
-                    audioSrc.PlayOneShot(track2);
+                    audioSrc.clip = track2;
                     lastSong = 2;
                     break;
                 case 3:
                     Debug.Log("track3");
-                    audioSrc.PlayOneShot(track3);
+                    audioSrc.clip = track3;
                     lastSong = 3;
                     break;
                 case 4:
                     Debug.Log("track4");
-                    audioSrc.PlayOneShot(track4);
+                    audioSrc.clip = track4;
                     lastSong = 4;
                     break;
                 case 5:
                     Debug.Log("track5");
-                    audioSrc.PlayOneShot(track5);
+                    audioSrc.clip = track5;
                     lastSong = 5;
                     break;
                 case 6:
                     Debug.Log("track6");
-                    audioSrc.PlayOneShot(track6);
+                    audioSrc.clip = track6;
                     lastSong = 6;
                     break;
                 case 7:
                     Debug.Log("track7");
-                    audioSrc.PlayOneShot(track7);
+                    audioSrc.clip = track7;
                     lastSong = 7;
                     break;
 
             }
+            audioSrc.Play();
         }
     }
 }
