@@ -28,13 +28,19 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
     public void OnDrag(PointerEventData eventData) {
 
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (PreLevel.gameStarted == false)
+        {
 
+            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
-        canvasGroup.alpha = .6f;
-        canvasGroup.blocksRaycasts = false;
+        if (PreLevel.gameStarted == false)
+        {
+            canvasGroup.alpha = .6f;
+            canvasGroup.blocksRaycasts = false;
+        }
     }
 
     public void OnDrop(PointerEventData eventData)

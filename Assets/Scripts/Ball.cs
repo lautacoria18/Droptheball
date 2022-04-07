@@ -25,7 +25,7 @@ public class Ball : MonoBehaviour
         {
             Debug.Log("Estrella");
             starTaken = true;
-            Destroy(col.gameObject);
+            col.gameObject.SetActive(false);
         }
         else if (col.tag == "LevelWin"){
             Debug.Log("gano");
