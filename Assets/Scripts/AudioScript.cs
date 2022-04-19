@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class AudioScript : MonoBehaviour
 {
     public static AudioClip track1, track2, track3, track4, track5, track6, track7;
     static AudioSource audioSrc;
-    public bool playing = false;
+    //public bool playing;
     private int lastSong;
+
+
     // Start is called before the first frame update
 
     public static AudioScript inst;
@@ -48,6 +51,7 @@ public class AudioScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        
     }
 
     void Start() {
@@ -60,19 +64,14 @@ public class AudioScript : MonoBehaviour
         track7 = Resources.Load<AudioClip>("track7");
 
         audioSrc = GetComponent<AudioSource>();
+
+
+       
+        
     }
     void Update() {
 
-       
-/*
-        if (!audioSrc.isPlaying) {
-
-            Debug.Log("Se termino");
-            //Invoke("PlayRandomSong", 1.5f);
-            PlayRandomSong();
-        }
-        */
-        
+ 
     }
 
     void PlayRandomSong()
@@ -132,4 +131,5 @@ public class AudioScript : MonoBehaviour
             audioSrc.Play();
         }
     }
+
 }

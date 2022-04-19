@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PreLevel : MonoBehaviour
 {
@@ -10,7 +11,14 @@ public class PreLevel : MonoBehaviour
     private Vector3 startPosition;
     private GameObject star;
     private Vector3 starPosition;
-   
+
+
+    private GameObject textClear, textRestart, textDrop;
+    private GameObject buttonClear, buttonRestart, buttonDrop;
+    Sprite buttonSprite;
+    Font font;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +29,29 @@ public class PreLevel : MonoBehaviour
         starPosition = star.transform.position;
         startPosition = ball.transform.position;
         Time.timeScale = 0f;
+
+        ///
+        buttonSprite = Resources.Load<Sprite>("BigBlue");
+        textClear = GameObject.Find("Clear/Text");
+        textRestart = GameObject.Find("Restart/Text");
+        textDrop = GameObject.Find("Drop/Text");
+        buttonClear = GameObject.Find("Clear");
+        buttonRestart = GameObject.Find("Restart");
+        buttonDrop = GameObject.Find("Drop");
+        font = Resources.Load<Font>("Font");
+
+        textClear.GetComponent<Text>().font = font;
+        textDrop.GetComponent<Text>().font = font;
+        textRestart.GetComponent<Text>().font = font;
+
+        textClear.GetComponent<Text>().fontSize = 18;
+        textDrop.GetComponent<Text>().fontSize = 18;
+        textRestart.GetComponent<Text>().fontSize = 18;
+
+        buttonClear.GetComponent<Image>().sprite = buttonSprite;
+        buttonDrop.GetComponent<Image>().sprite = buttonSprite;
+        buttonRestart.GetComponent<Image>().sprite = buttonSprite;
+
     }
 
 
